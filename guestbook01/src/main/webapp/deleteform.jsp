@@ -1,4 +1,8 @@
+<%@page import="com.douzone.guestbook.vo.GuestbookVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");	
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,7 +10,7 @@
 </head>
 <body>
 	<form method="post" action="delete.jsp">
-		<input type="hidden" name="no" value="">
+		<input type="hidden" name="no" value=<%=request.getParameter("no")%>>
 		<input type="password" name="password">
 		<input type="submit" value="확인">
 	</form>
